@@ -1,38 +1,221 @@
+/* ----- Reset & Base Styles ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ----- Navbar ----- */
 .navbar {
   background: #1e3a8a;
-  padding: 1rem 2rem;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo {
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
+  color: #fff;
 }
 
-.navbar .nav-links {
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.navbar .nav-links li a {
+.nav-links a {
   color: white;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
-.navbar .nav-links li a:hover {
+.nav-links a:hover {
   color: #93c5fd;
 }
 
+/* ----- Hero Section (Home Page) ----- */
 .hero {
   text-align: center;
   padding: 6rem 2rem;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
   border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ----- Sections ----- */
+section {
+  background: white;
+  margin: 3rem 0;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #2563eb;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* ----- Resume Button ----- */
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ----- Skills Section ----- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-grid span {
+  background: #e0e7ff;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #1e40af;
+  transition: all 0.3s ease;
+}
+
+.skills-grid span:hover {
+  background: #c7d2fe;
+  transform: scale(1.05);
+}
+
+/* ----- Project Cards ----- */
+.project-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.project-card:hover {
+  border-color: #60a5fa;
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+.project-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.project-card a {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  color: #1d4ed8;
+}
+
+/* ----- Contact Form ----- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* ----- Footer ----- */
+footer {
+  background: #e5e7eb;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
