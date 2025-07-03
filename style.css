@@ -114,7 +114,7 @@ ul {
 .btn-outline:hover {
   background-color: var(--primary-color);
   color: #e5e7eb;
-  border: 2px solid #3b82f6;
+  border: 2px solid #e5e7eb;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -266,14 +266,9 @@ nav .nav-container {
 
 /* ===== SKILLS SECTION ===== */
 .skills-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 2rem;
-  overflow-x: auto; /* optional scroll if screen too narrow */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 10px;
 }
 
 .skill-category {
