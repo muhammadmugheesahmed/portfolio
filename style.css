@@ -99,8 +99,10 @@ ul {
 }
 
 .btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
   transform: translateY(-2px);
+  color: var(--secondary-color);
+  border: 2px solid var (--primary-color);
 }
 
 .btn-outline {
@@ -112,6 +114,7 @@ ul {
 .btn-outline:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
+  border: var(--border-color);
 }
 
 /* ===== HEADER & NAVIGATION ===== */
