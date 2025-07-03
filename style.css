@@ -102,7 +102,7 @@ ul {
   background-color: var(--bg-color);
   transform: translateY(-2px);
   color: var(--secondary-color);
-  border: 2px solid var (--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-outline {
