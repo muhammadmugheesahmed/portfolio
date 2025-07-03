@@ -285,8 +285,9 @@ nav .nav-container {
 }
 
 .skill-category:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   border-color: var(--primary-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);;
 }
 
 .skill-category h3 {
@@ -704,7 +705,7 @@ nav .nav-container {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-color );
   flex-grow: 1;
 }
 
