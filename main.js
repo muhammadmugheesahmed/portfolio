@@ -56,39 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 
-  // Form submission (prevent default for demo)
-  //const contactForm = document.querySelector(".contact-form");
-  //if (contactForm) {
-    //contactForm.addEventListener("submit", (e) => {
-      //e.preventDefault();
-      //alert(
-        //"Form submission would be handled here. In a real implementation, this would send data to a server."
-      //);
-      //contactForm.reset();
-    //});
-  //}
+  // ✅ Initialize EmailJS
+  emailjs.init("Pn9uaGxw2hXs-llnG"); // Make sure this is your real public key
 
-  emailjs.init("Pn9uaGxw2hXs-llnG"); // 🔁 Replace this with your actual public key
-
-// Form submission handler
-
+  // ✅ Contact form submission
   const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    emailjs.sendForm("service_u5skyro", "template_p09eknt ", form)
-      .then(() => {
-        alert("Message sent successfully! ✅");
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("Failed to send message ❌");
-      });
-  });
-
+      emailjs.sendForm("service_u5skyro", "template_p09eknt", form) // ⚠️ Fixed extra space in template ID
+        .then(() => {
+          alert("Message sent to email successfully! ✅");
+          form.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error);
+          alert("Failed to send message ❌");
+        });
+    });
+  }
 });
+
 
 //service_u5skyro            service id
 //0For34Sn-JUxmH7_L8np6      private key
