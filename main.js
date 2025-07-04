@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Contact form submission
   const form = document.getElementById("contact-form");
-
+   const timeInput = document.getElementById("current_time");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
