@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.sendForm("service_u5skyro", "template_p09eknt", form) // ⚠️ Fixed extra space in template ID
+      emailjs.sendForm("service_u5skyro", "template_mcle4ua", form) // ⚠️ Fixed extra space in template ID
         .then(() => {
           alert("Message sent to email successfully! ✅");
           form.reset();
