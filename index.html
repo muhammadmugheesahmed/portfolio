@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </head>
   <body>
     <header id="header">
@@ -288,15 +289,16 @@
 
               </div>
             </div>
+            
             <form class="contact-form">
               <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
+                <input type="text"  name="from_name" placeholder="Your Name" required />
               </div>
               <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
+                <input type="email" name="from_email" placeholder="Your Email" required />
               </div>
               <div class="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
               </div>
               <button type="submit" class="btn">Send Message</button>
             </form>
