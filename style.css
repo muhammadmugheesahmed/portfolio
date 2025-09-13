@@ -2,7 +2,7 @@
 :root {
   --primary-color: #3b82f6;
   --secondary-color: #2563eb;
-  --bg-color: #e0e6ec;
+  --bg-color: #f9fafb;
   --surface-color: #ffffff;
   --text-color: #1f2937;
   --text-secondary-color: #6b7280;
@@ -400,6 +400,15 @@ nav .nav-container {
   display: flex;
   flex-direction: column;
 }
+.web-project-card {
+  background: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
 
 .project-card:hover {
   transform: translateY(-10px);
@@ -502,7 +511,7 @@ nav .nav-container {
   gap: 60px;
   max-width: 900px;
   margin: 0 auto;
-  background: var(--bg-color);
+  background: var(--surface-color);
   padding: 50px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
@@ -571,7 +580,7 @@ nav .nav-container {
   font-family: inherit;
   transition: var(--transition);
   font-size: 1rem;
-  background-color: var(--surface-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 .form-group {
