@@ -2,7 +2,7 @@
 :root {
   --primary-color: #3b82f6;
   --secondary-color: #2563eb;
-  --bg-color: #ebeff3;
+  --bg-color: #f3f6f8;
   --surface-color: #ffffff;
   --text-color: #1f2937;
   --text-secondary-color: #6b7280;
@@ -420,6 +420,11 @@ nav .nav-container {
   border-color: var(--primary-color);
 }
 
+.web-project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
 .project-image {
   height: 220px;
   overflow: hidden;
