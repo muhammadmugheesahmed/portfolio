@@ -272,7 +272,7 @@ nav .nav-container {
 }
 
 .skill-category {
-  background: var(--bg-color);
+  background: var(--surface-color);
   padding: 35px 30px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
@@ -392,7 +392,7 @@ nav .nav-container {
 }
 
 .project-card {
-  background: var(--bg-color);
+  background: var(--surface-color;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-color);
