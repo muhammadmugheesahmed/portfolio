@@ -736,6 +736,12 @@ nav .nav-container {
   .cert-list {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Center the last item if odd */
+  .cert-list .cert-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1; /* span across both columns */
+    justify-self: center;
+  }
+
 }
 
 /* Certification Cards */
@@ -759,7 +765,7 @@ nav .nav-container {
 .cert-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 8px;
 }
 
