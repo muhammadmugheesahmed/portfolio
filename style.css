@@ -704,3 +704,63 @@ nav .nav-container {
   flex-grow: 1;
 }
 
+/* General Layout */
+.certifications {
+  background: #f9fafb;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: left;
+}
+
+/* Certification Cards */
+.cert-list {
+  display: grid;
+  gap: 20px;
+}
+
+.cert-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Certification Text */
+.cert-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cert-meta {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.cert-desc {
+  font-size: 15px;
+  color: #374151;
+  margin-top: 10px;
+  line-height: 1.5;
+}
