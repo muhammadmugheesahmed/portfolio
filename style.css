@@ -746,7 +746,7 @@ nav .nav-container {
 
 /* Certification Cards */
 .cert-card {
-  background: var(--surface-color);
+  background: var(--bg-color);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid var(--border-color);
