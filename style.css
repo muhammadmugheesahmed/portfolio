@@ -724,10 +724,18 @@ nav .nav-container {
 }
 
 /* Certification Grid */
+/* Certification Grid */
 .cert-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr; /* Default = 1 per row */
   gap: 25px;
+}
+
+/* Force 2 per row on laptops & desktops */
+@media (min-width: 768px) {
+  .cert-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Certification Cards */
