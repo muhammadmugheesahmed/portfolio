@@ -277,18 +277,19 @@ nav .nav-container {
   border-radius: 10px;
   border: 1px solid var(--border-color);
   transition: var(--transition);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .skill-category:hover {
   transform: translateY(-4px);
   border-color: var(--primary-color);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);;
 }
 
 .skill-category h3 {
   font-size: 1.5rem;
   margin-bottom: 25px;
-  color: var(--primary-color);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -360,6 +361,7 @@ nav .nav-container {
   padding: 25px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .timeline-content h3 {
@@ -399,6 +401,7 @@ nav .nav-container {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 .web-project-card {
   background: var(--bg-color);
@@ -408,11 +411,12 @@ nav .nav-container {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   border-color: var(--primary-color);
 }
 
@@ -476,10 +480,11 @@ nav .nav-container {
   background: var(--surface-color);
   border-radius: 10px;
   padding: 30px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   display: flex;
   gap: 25px;
   align-items: flex-start;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .edu-icon {
@@ -515,6 +520,7 @@ nav .nav-container {
   padding: 50px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info p {
@@ -774,7 +780,7 @@ nav .nav-container {
 .cert-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 8px;
 }
 
