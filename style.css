@@ -704,63 +704,62 @@ nav .nav-container {
   flex-grow: 1;
 }
 
-/* General Layout */
+/* ===== CERTIFICATIONS SECTION ===== */
 .certifications {
-  background: #f9fafb;
-  padding: 60px 20px;
-  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  padding: 100px 20px;
 }
 
-.container {
+.certifications .cert-container {
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Section Title */
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #222;
-  text-align: left;
+.certifications .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: var(--primary-color);
 }
 
 /* Certification Cards */
 .cert-list {
   display: grid;
-  gap: 20px;
+  gap: 25px;
 }
 
 .cert-card {
-  background: #fff;
-  padding: 20px;
+  background: var(--surface-color);
+  padding: 25px;
   border-radius: 12px;
+  border: 1px solid var(--border-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e7eb;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: var(--transition);
 }
 
 .cert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
 }
 
 /* Certification Text */
 .cert-title {
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-color);
+  margin-bottom: 5px;
 }
 
 .cert-meta {
-  font-size: 14px;
-  color: #6b7280;
-  margin-top: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+  margin-bottom: 12px;
 }
 
 .cert-desc {
-  font-size: 15px;
-  color: #374151;
-  margin-top: 10px;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  line-height: 1.6;
 }
