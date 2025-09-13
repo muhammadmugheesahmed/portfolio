@@ -706,7 +706,7 @@ nav .nav-container {
 
 /* ===== CERTIFICATIONS SECTION ===== */
 .certifications {
-  background: var(--bg-color);
+  background: var(--surface-color);
   padding: 100px 20px;
 }
 
