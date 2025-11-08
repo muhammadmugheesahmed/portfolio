@@ -295,63 +295,26 @@
     </footer>
 
     
+
+ 
 <!-- Floating Chatbot Button -->
-<div id="chatbot-container" style="position:fixed; bottom: 35px; right: 35px; z-index: 9999; text-align:right;">
+<div id="chatbot-container" class="chatbot-container">
   <!-- Chat Button -->
-  <button id="chatbot-toggle" style="
-    background-color:#0a1f44; /* Dark navy blue */
-    color:white;
-    border:none;
-    border-radius:50%;
-    width:80px;
-    height:80px;
-    font-size:32px;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  ">
-    💬
-  </button>
-
-  <!-- Chatbot Description -->
-  <p id="chatbot-label" style="font-size:17px; margin-top:5px; font-weight: bold;">Mughees's Assistant</p>
-
+  <button id="chatbot-toggle" class="chatbot-toggle"> 💬 </button>
+  <span id="chatbot-label" class="chatbot-label">Mughees's Assistant </span>
   <!-- Chatbot Wrapper -->
-  <div id="chatbot-wrapper" style="
-    width:450px; 
-    height:600px; 
-    display:none; 
-    margin-top:10px; 
-    position: relative;
-  ">
+  <div id="chatbot-wrapper" class="chatbot-wrapper" >
     <!-- Chatbot -->
-    <div id="chatbot" style="
-      width:100%; 
-      height:100%; 
-      box-shadow:0 4px 12px rgba(0,0,0,0.3); 
-      border-radius:12px; 
-      overflow:hidden;
-    "></div>
+    <div id="chatbot" class="chatbot" ></div>
+  
   </div>
 
   <!-- Exit Button (outside chatbot div) -->
-  <button id="chatbot-close" style="
-    position: absolute; 
-    bottom: 610px; /* adjust relative to chatbot top */
-    right: 20px; 
-    background:#0a1f44; 
-    color:white; 
-    border:none; 
-    border-radius:50%;
-    width:40px; 
-    height:40px; 
-    font-size:24px; 
-    cursor:pointer; 
-    display:none; 
-    z-index:10000;
-  ">✖</button>
+  <button id="chatbot-close" class="chatbot-close"> ✖ </button>
+
+   
 </div>
+  
 
 <script type="text/javascript">
   const chatbotToggle = document.getElementById('chatbot-toggle');
