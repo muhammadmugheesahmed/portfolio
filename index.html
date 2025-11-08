@@ -301,37 +301,24 @@
 </div>
 
 <script type="text/javascript">
-  let chatbotLoaded = false;
-
-  document.getElementById('chatbot-toggle').addEventListener('click', function() {
-    const chatbotDiv = document.getElementById('chatbot');
-    
-    if (!chatbotLoaded) {
-      // Load the Voiceflow chatbot only when first clicked
-      (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '689ef4ce918376538e4295cb' }, // your Voiceflow project ID
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production', // 'production' if published
-            render: {
-              mode: 'embedded',
-              target: chatbotDiv
-            }
-          });
-        };
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-        v.type = "text/javascript";
-        s.parentNode.insertBefore(v, s);
-      })(document, 'script');
-
-      chatbotLoaded = true;
-    }
-
-    // Toggle visibility
-    chatbotDiv.style.display = chatbotDiv.style.display === 'none' ? 'block' : 'none';
-  });
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '689ef4ce918376538e4295ca' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          },
+          render: {
+            mode: 'embedded',
+            target: document.getElementById('chatbot')
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
   </body>
 </html>
