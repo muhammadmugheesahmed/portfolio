@@ -294,9 +294,9 @@
       </div>
     </footer>
 
-    <!-- Floating Chatbot Button -->
+    
 <!-- Floating Chatbot Button -->
-<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; text-align:center;">
+<div id="chatbot-container" style="position:fixed; bottom: 35px; right: 35px; z-index: 9999; text-align:right;">
   <!-- Chat Button -->
   <button id="chatbot-toggle" style="
     background-color:#0a1f44; /* Dark navy blue */
@@ -315,48 +315,62 @@
   </button>
 
   <!-- Chatbot Description -->
-  <p id="chatbot-label" style="font-size:14px; margin-top:5px;">Talk to Mughees Assistant</p>
+  <p id="chatbot-label" style="font-size:17px; margin-top:5px; font-weight: bold;">Mughees's Assistant</p>
 
-  <!-- Chatbot Frame -->
-  <div id="chatbot" style="
+  <!-- Chatbot Wrapper -->
+  <div id="chatbot-wrapper" style="
     width:450px; 
     height:600px; 
     display:none; 
     margin-top:10px; 
-    box-shadow:0 4px 12px rgba(0,0,0,0.3); 
-    border-radius:12px; 
-    position:relative;
+    position: relative;
   ">
-    <!-- Exit Button -->
-    <button id="chatbot-close" style="
-      position:absolute; 
-      top:10px; 
-      right:10px; 
-      background:none; 
-      border:none; 
-      font-size:20px; 
-      cursor:pointer; 
-      z-index:1000;
-    ">✖</button>
+    <!-- Chatbot -->
+    <div id="chatbot" style="
+      width:100%; 
+      height:100%; 
+      box-shadow:0 4px 12px rgba(0,0,0,0.3); 
+      border-radius:12px; 
+      overflow:hidden;
+    "></div>
   </div>
+
+  <!-- Exit Button (outside chatbot div) -->
+  <button id="chatbot-close" style="
+    position: absolute; 
+    bottom: 610px; /* adjust relative to chatbot top */
+    right: 20px; 
+    background:#0a1f44; 
+    color:white; 
+    border:none; 
+    border-radius:50%;
+    width:40px; 
+    height:40px; 
+    font-size:24px; 
+    cursor:pointer; 
+    display:none; 
+    z-index:10000;
+  ">✖</button>
 </div>
 
 <script type="text/javascript">
   const chatbotToggle = document.getElementById('chatbot-toggle');
-  const chatbot = document.getElementById('chatbot');
+  const chatbotWrapper = document.getElementById('chatbot-wrapper');
   const chatbotLabel = document.getElementById('chatbot-label');
   const chatbotClose = document.getElementById('chatbot-close');
 
-  // Toggle chatbot open/close
+  // Open chatbot
   chatbotToggle.addEventListener('click', () => {
-    chatbot.style.display = 'block';
-    chatbotLabel.style.display = 'none'; // Hide label when chatbot is open
+    chatbotWrapper.style.display = 'block';
+    chatbotClose.style.display = 'block'; // show close button
+    chatbotLabel.style.display = 'none';
   });
 
   // Close chatbot
   chatbotClose.addEventListener('click', () => {
-    chatbot.style.display = 'none';
-    chatbotLabel.style.display = 'block'; // Show label when chatbot is closed
+    chatbotWrapper.style.display = 'none';
+    chatbotClose.style.display = 'none'; // hide close button
+    chatbotLabel.style.display = 'block';
   });
   // Load Voiceflow Chatbot
   (function(d, t) {
